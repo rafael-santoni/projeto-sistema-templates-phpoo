@@ -6,6 +6,6 @@ class HomeController
 {
   public function index()
   {
-    dump('HomeController -> index()');
+    view('home', ['name' => 'Rafael']);
   }
 }
