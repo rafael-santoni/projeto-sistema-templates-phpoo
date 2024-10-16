@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "App/"
-        }
+        },
+        "files":[
+            "App/Framework/Helpers/helpers.php"
+        ]
     },
     "scripts":{
         "server":"php -S localhost:8000 -t public"

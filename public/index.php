@@ -1,3 +1,7 @@
 <?php
 
-echo "Hello World :)";
+session_start();
+
+require '../vendor/autoload.php';
+
+routerExecute();
