@@ -1,0 +1,20 @@
+<?php
+
+$data = [
+  'name' => 'Rafa',
+  'age' => 42
+];
+
+ob_start();
+
+extract($data);
+
+// echo 'Home';
+
+require 'home.php';
+
+$content = ob_get_contents();
+
+ob_end_clean();
+
+var_dump($content);
