@@ -6,6 +6,6 @@ class DashboardController
 {
   public function index()
   {
-    dump('DashboardController -> index()');
+    view('dashboard_home', ['title' => 'Dashboard - Home']);
   }
 }
