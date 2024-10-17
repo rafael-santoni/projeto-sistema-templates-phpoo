@@ -1,6 +1,7 @@
 <?php
 
 use App\Framework\Classes\Engine;
+use App\Framework\Classes\Macros;
 use App\Framework\Classes\Router;
 
 function path() {
@@ -27,6 +28,8 @@ function view(string $view, array $data = []) {
   try {
     
     $engine = new Engine;
+    $engine->dependencies([new Macros]);
+    
     echo $engine->render($view, $data);
     
   } catch (\Throwable $th) {
