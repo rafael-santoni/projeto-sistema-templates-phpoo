@@ -8,4 +8,9 @@ class LoginController
   {
     dump('LoginController -> index()');
   }
+
+  public function store()
+  {
+    dump('LoginController -> store()');
+  }
 }
