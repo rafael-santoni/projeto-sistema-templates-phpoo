@@ -3,6 +3,7 @@
 namespace App\Framework\Classes;
 
 use Exception;
+use App\Framework\Classes\Auth;
 
 class Router
 {
@@ -40,6 +41,14 @@ class Router
 
     // list($controller, $action) = explode('@', $routes[$this->request][$this->path]);
     [$controller, $action] = explode('@', $routes[$this->request][$this->path]);
+
+    if(str_contains($action, ":")) {
+      [$action, $auth] = explode(':', $action);
+      
+      if($auth === 'auth') {
+        Auth::check($auth);
+      }
+    }
 
     $controllerNamespace = "App\\Controllers\\{$controller}";
 
