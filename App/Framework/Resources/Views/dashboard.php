@@ -9,6 +9,7 @@
   
   <!-- Referência do CSS Global -->
   <link rel="stylesheet" href="/assets/css/global.css">
+  <?php $this->section('css'); ?>
   
   <!-- Biblioteca do Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
@@ -16,7 +17,7 @@
 </head>
 <body>
 
-  <section class="container-dashboard">
+    <section class="container-dashboard">
         <aside class="container-aside" id="container-aside">
             <?php require 'partials/sidebar.php'; ?>
         </aside>
@@ -29,6 +30,7 @@
             </article>
 
             <main class="container-section-principal-content">
+                <h1 id="h1">H1 na Master</h1>
                 <?= $this->load(); ?>
             </main>
 
