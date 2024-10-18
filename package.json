@@ -4,17 +4,34 @@
   "description": "Projeto desenvolvido durante os estudos sobre PHPOO com base na série de videoaulas da playlist Sistema de Templates com PHP no canal Clube Full-Stack do youtube, e tem por objetivo criar um sistema para exibir na tela e gerenciar os templates requisitados pelas Classes Controllers de uma aplicação PHP.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development webpack --progress --watch",
+    "prod": "NODE_ENV=production webpack --progress --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rafael-santoni/projeto-sistema-templates-phpoo.git"
   },
-  "keywords": ["templates", "PHP", "PHPOO", "MVC"],
+  "keywords": [
+    "templates",
+    "PHP",
+    "PHPOO",
+    "MVC"
+  ],
   "author": "Rafael Santoni",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rafael-santoni/projeto-sistema-templates-phpoo/issues"
   },
-  "homepage": "https://github.com/rafael-santoni/projeto-sistema-templates-phpoo#readme"
+  "homepage": "https://github.com/rafael-santoni/projeto-sistema-templates-phpoo#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
 }
